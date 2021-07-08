@@ -9,7 +9,7 @@ body {
 }
 
 .quiz-container {
-    max-width: 700px;
+    max-width: 950px;
     min-height: 497px;
     background-color: #ffffff;
     margin: 30px auto;
@@ -19,8 +19,8 @@ body {
 
 .question-number h3 {
     color: darkcyan;
-    border-bottom: 1px solid #ccc;
-    margin: 0;
+    border-bottom: 1px solid #red;
+    margin: 2px;
     padding-bottom:  10px;
     margin-right: 45px;
     padding-top: 10px;
@@ -36,14 +36,49 @@ div#counter h3{
     text-align: right;
     border-bottom: none;
     display: inline;
-    margin-right: 0px;
+    margin-right: -3px;
 }
 
 #question {
-    font-size: 24px;
-    color: #000000;
-    padding: 15px 0;
+
+    padding: 40px 25px;
     margin-bottom: 10px;
+    background: #008B8B;
+    height: 300px;
+}
+
+#question h1{
+   margin: 0px;
+   font-family: Roboto;
+   font-style: normal;
+   font-weight: bold;
+   font-size: 40px;
+   line-height: 35px;
+   color: #FFFFFF;
+}
+
+.question-text {
+    float: left;
+    margin-left: 50px;
+}
+
+#img-girl {
+    float: right;
+    height: 120%;
+    margin-right: 80px;
+
+}
+
+
+#question p{
+    margin: 0px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 21px;
+
+    color: #FFFFFF;
 }
 
 .texts {
@@ -56,12 +91,12 @@ div#counter h3{
 }
 
 .options div {
-    background-color: #cccccc;
+    background-color: darkcyan;
     font-size: 16px;
-    color: #000000;
+    color: #FFF;
     margin-bottom: 10px;
     border-radius: 5px;
-    padding: 15px;
+    padding: 1px 10px;
     cursor: pointer;
     transition: all .2s ease-in-out;
 }

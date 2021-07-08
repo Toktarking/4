@@ -1,5 +1,21 @@
 
 
+if (localStorage.getItem('score') != 0) {
+    window.location.href = 'home.html'
+    alert('You may not pass the test');
+
+
+}
+
+//let score = 0; //Final result of test
+if (!localStorage.getItem('score')) {
+    localStorage.setItem('score', 0);
+}
+
+let score = localStorage.getItem('score');
+
+
+
 /* All answer options */
 const option1 = document.querySelector('.option1'),
       option2 = document.querySelector('.option2'),
@@ -9,6 +25,7 @@ const option1 = document.querySelector('.option1'),
 
 /* All our options */
 const optionElements = document.querySelectorAll('.option');
+
 
 const question = document.getElementById('question'),
       numberOfQuestion = document.getElementById('number-of-question'),
@@ -21,7 +38,7 @@ const answersTracker = document.getElementById('answers-tracker');
 
 const btnNext = document.getElementById('btn-next');
 
-let score = 0; //Final result of test
+
 
 
 
@@ -248,11 +265,16 @@ const randomQuestion = () => {
     completedAnswers.push(indexOfQuestion);
 };
 
+
+
 const checkAnswer = el => {
     if(el.target.dataset.id == questions[indexOfQuestion].rightAnswer) {
         el.target.classList.add('correct');
+        let score = localStorage.getItem('score');
         score++;
+
         updateAnswerTracker('correct');
+        localStorage.setItem('score', score);
 
     } else {
         el.target.classList.add('wrong');
@@ -290,7 +312,7 @@ const updateAnswerTracker = status => {
 
 const validate = () => {
     if (!optionElements[0].classList.contains('disabled')) {
-        alert('Выберите один из предложенных ответов');
+        alert('Жауаптардың біреуін таңдау керек');
     } else {
         randomQuestion();
         enableOptions();
@@ -307,12 +329,13 @@ for (option of optionElements) {
 
 const quizOver = () => {
     document.querySelector('.quiz-over-modal').classList.add('active');
-    correctAnswer.innerHTML = score;
+    correctAnswer.innerHTML = localStorage.getItem('score');
     numberOfAllQuestions2.innerHTML = questions.length;
+
 }
 
 const tryAgain = () => {
-    window.location.reload();
+    pass;
 }
 
 btnTryAgain.addEventListener('click', tryAgain);
@@ -320,7 +343,7 @@ btnTryAgain.addEventListener('click', tryAgain);
 counterSec = 10;
 counterSec2 = 5;
 counterMin = 9;
-counterMin2 = 1;
+counterMin2 = 0;
 
 
 
@@ -356,9 +379,8 @@ function countSeconds() {
         //document.querySelector('#counter-seconds').innerHTML = "Время вышло";
         //document.querySelector('#counter-seconds').style.color = "red";
         //document.querySelector('#counter-seconds2').innerHTML = "";
-    }else if (counterMin < 0 && counterMin2 == 0) {
-           quizOver();
-           document.querySelector('#counter-seconds').innerHTML = "Время вышло";
+    } else if (counterMin < 0 && counterMin2 == 0) {
+           document.querySelector('#counter-seconds').innerHTML = "Уақыт аяқталды";
            counterSec = 0;
            counterSec2 = 0;
            counterMin = 0;
@@ -368,7 +390,7 @@ function countSeconds() {
            document.querySelector('#counter-minutes').innerHTML = "";
            document.querySelector('#counter-minutes2').innerHTML = "";
            document.querySelector('#double-points').innerHTML = "";
-
+           quizOver();
         }
 }
 
@@ -386,6 +408,8 @@ window.addEventListener('load', () => {
     randomQuestion();
     answerTracker();
 
+
+
 });
 
 
@@ -397,7 +421,7 @@ window.onbeforeunload = function() {
 
 
 
-
+console.log(score);
 
 
 
