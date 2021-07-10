@@ -1,7 +1,7 @@
 
 
 if (localStorage.getItem('score') != 0) {
-    window.location.href = 'home.html'
+    window.location.href = 'index.html'
     alert('You may not pass the test');
 
 
