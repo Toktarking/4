@@ -9,7 +9,7 @@ console.log(user);
 //localStorage.setItem(`${user}1`, `${user}1`);
 
 
-if (localStorage.getItem(`${user}_score_c1`) != 0) {    //change a>c or 1>2
+if (localStorage.getItem(`${user}_score_c4`) != 0) {    //change a>c or 1>2
     window.location.href = `${user}.html`;
     alert('Сіз бұл тестті қайта тапсыра алмайсыз');
 
@@ -17,11 +17,11 @@ if (localStorage.getItem(`${user}_score_c1`) != 0) {    //change a>c or 1>2
 }
 
 //let score = 0; //Final result of test
-if (!localStorage.getItem(`${user}_score_c1`)) {   //change a>c or 1>2
-    localStorage.setItem(`${user}_score_c1`, 0);   //change a>c or 1>2
+if (!localStorage.getItem(`${user}_score_c4`)) {   //change a>c or 1>2
+    localStorage.setItem(`${user}_score_c4`, 0);   //change a>c or 1>2
 }
 
-let score = localStorage.getItem(`${user}_score_c1`);  //change a>c or 1>2
+let score = localStorage.getItem(`${user}_score_c4`);  //change a>c or 1>2
 
 
 
@@ -215,7 +215,7 @@ const questions = [
         rightAnswer: 4
     },
     {         //question 15
-        question: ' А және В сандарын мына шарттарды қанағаттандырады, 4 &le; А &le; 6; 1 &le; В &le; 2; Келесі жауапта берілген сандардың қайсысы барлық уақытта 9-дан кіші болады?',
+        question: ' А және В сандарын мына шарттарды қанағаттандырады, 4&le;А&le;6; 1&le;В&le;2; Келесі жауапта берілген сандардың қайсысы барлық уақытта 9-дан кіші болады?',
         options: [
             'А. 3A-B',
             'В. 4A-B',
@@ -282,11 +282,11 @@ const randomQuestion = () => {
 const checkAnswer = el => {
     if(el.target.dataset.id == questions[indexOfQuestion].rightAnswer) {
         el.target.classList.add('correct');
-        let score = localStorage.getItem(`${user}_score_c1`);  //change a>c or 1>2
+        let score = localStorage.getItem(`${user}_score_c4`);  //change a>c or 1>2
         score++;
 
         updateAnswerTracker('correct');
-        localStorage.setItem(`${user}_score_c1`, score);   //change a>c or 1>2
+        localStorage.setItem(`${user}_score_c4`, score);   //change a>c or 1>2
 
     } else {
         el.target.classList.add('wrong');
@@ -341,7 +341,7 @@ for (option of optionElements) {
 
 const quizOver = () => {
     document.querySelector('.quiz-over-modal').classList.add('active');
-    correctAnswer.innerHTML = localStorage.getItem(`${user}_score_c1`);  //change a>c or 1>2
+    correctAnswer.innerHTML = localStorage.getItem(`${user}_score_c4`);  //change a>c or 1>2
     numberOfAllQuestions2.innerHTML = questions.length;
 
 }

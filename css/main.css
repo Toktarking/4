@@ -172,4 +172,5 @@ div#counter h3{
 img.math-pictures {
     display: block;
     margin: 0px auto;
+    max-width: 500px;
 }

@@ -357,6 +357,21 @@ questionC1.onclick = () => {  //change here
     window.location.href = "question-c1.html";
 };
 
+questionC2.onclick = () => {  //change here
+    window.location.href = "question-c2.html";
+};
+
+questionC3.onclick = () => {  //change here
+    window.location.href = "question-c3.html";
+};
+
+questionC4.onclick = () => {  //change here
+    window.location.href = "question-c4.html";
+};
+
+questionC5.onclick = () => {  //change here
+    window.location.href = "question-c5.html";
+};
 
 
 

@@ -9,7 +9,7 @@ console.log(user);
 //localStorage.setItem(`${user}1`, `${user}1`);
 
 
-if (localStorage.getItem(`${user}_score_c1`) != 0) {    //change a>c or 1>2
+if (localStorage.getItem(`${user}_score_c2`) != 0) {    //change a>c or 1>2
     window.location.href = `${user}.html`;
     alert('Сіз бұл тестті қайта тапсыра алмайсыз');
 
@@ -17,11 +17,11 @@ if (localStorage.getItem(`${user}_score_c1`) != 0) {    //change a>c or 1>2
 }
 
 //let score = 0; //Final result of test
-if (!localStorage.getItem(`${user}_score_c1`)) {   //change a>c or 1>2
-    localStorage.setItem(`${user}_score_c1`, 0);   //change a>c or 1>2
+if (!localStorage.getItem(`${user}_score_c2`)) {   //change a>c or 1>2
+    localStorage.setItem(`${user}_score_c2`, 0);   //change a>c or 1>2
 }
 
-let score = localStorage.getItem(`${user}_score_c1`);  //change a>c or 1>2
+let score = localStorage.getItem(`${user}_score_c2`);  //change a>c or 1>2
 
 
 
@@ -59,171 +59,171 @@ const correctAnswer = document.getElementById('correct-answer'),
 
 const questions = [
     {       //question 1
-        question: 'АВСЕ шаршының қабырғасы 4 см, ал оның ауданы СЕD үшбұрышының ауданына тең. D нүктесінен а түзуіне дейінгі қашықтықты тап.<img class="math-pictures" src="img/1.1.png">',
+        question: 'Үш санының қосындысының мәні 111-ге тең. Осы сандардың ең кішісі ең үлкенінен 15 есе кем, ал үшінші сан мен ең кіші санның айырмасы 9-ға тең. Осы сандарды тап',
         options: [
-            'A. 11 см',
-            'B. 12 см',
-            'C. 14 см',
-            "D. 13 см",
-            'E. 10 см',
+            'A. 121 см',
+            'B. 131 см',
+            'C. 141 см',
+            "D. 151 см",
+            'E. 111 см',
         ],
-        rightAnswer: 1
+        rightAnswer: 4
     },
     {    //question 2
-        question: 'Теңсіздікті шешіңіз. <img class="math-pictures" src="img/1.2.png">',
+        question: 'Барыс хоккей командасында қарсыластарын негізгі уақытта жеңсе 3 ұпай, қосымша уақытта жеңсе 2 ұпай, негізгі уақытта жеңілсе 0 ұпай, қосымша уақытта жеңілсе 1 ұпай алады. Негізгі уақытта ешкімге жеңілмегені және негізгі уақытта ешкімді жеңбегені белгілі. Кестені салыстыр. <img class="math-pictures" src="img/2.2.png">',
         options: [
-            'А. x>1',
-            'В. x&le;1',
-            'С. x&ge;1',
-            'D. x<0',
-            'Е. x&le;1;',
+            'А. А=2В-6',
+            'В. А=2В',
+            'С. 2А=2В-1',
+            'D. 2А=В-2',
+            'Е.  А=2В+6',
         ],
         rightAnswer: 1
     },
     {        //question 3
-        question: 'Суретте АN=ВС, АВС - түзу, &ang;АNС=54&deg; ; АNВ бұрышының шамасы <img class="math-pictures" src="img/1.3.png">',
+        question: 'Радиусы 2 см шеңберге іштей сызылған квадраттың ауданы',
         options: [
-            'А. 15&deg;',
-            'В. 16&deg;',
-            'С. 20&deg;',
-            'D. 12&deg;',
-            'Е. 14&deg;',
+            'А. 2 см&sup2;',
+            'В. 4 см&sup2',
+            'С. 8 см&sup2',
+            'D. 6 см&sup2',
+            'Е. 7 см&sup2',
         ],
-        rightAnswer: 3
+        rightAnswer: 2
     },
     {          //question 4
 
-        question: 'Төмендегі фигурадағы шаршының ауданы 4см? болса, фигураның ауданын табыңыз. <img class="math-pictures" src="img/1.4.png">',
+        question: 'Шаршы матадан өлшемі 36*48 (см&sup2;) болатын қима кесіп дайындау керек. Артық қиық қалмайтын болу үшін матаның ең кем дегендегі өлшемі қандай болуы керек?',
         options: [
-            'А. 80 см&sup2;',
-            'В. 82 см&sup2;',
-            'С. 90 см&sup2;',
-            'D. 88 см&sup2;',
-            'Е. 84 см&sup2;',
+            'А. 48 см',
+            'В. 144 см',
+            'С. 1728 см',
+            'D. 168 см',
+            'Е. 288 см',
         ],
-        rightAnswer: 4
+        rightAnswer: 1
     },
 
-    {          //question 5 Егер шаршының а см қабырғасы мына аралықта жатса 0,9 < а < 1,2; онда периметрі қай аралықта жатады?
-        question: 'Егер шаршының <em>а</em> см қабырғасы мына аралықта жатса <em>0,9 < а < 1,2;</em> онда периметрі қай аралықта жатады?',
+    {          //question 5
+        question: 'Кестеде мектеп оқушыларының оқу үлгерімі туралы деректер келтірілген <img class="math-pictures" src="img/2.5.png"><img class="math-pictures" src="img/2.5a.png"> ',
         options: [
-            'А. 1,8 < P < 2,4',
-            'В. 3,9 < P < 4,2',
-            'С. 2,7 < P < 3,6',
-            'D. 3,6 < P < 4,8',
-            'Е. 4,5 < P < 6',
+            'А. А=2В',
+            'В. 2A=3B',
+            'С. A=4B',
+            'D. 2A=B',
+            'Е. A=B',
         ],
-        rightAnswer: 3
+        rightAnswer: 4
     },
     {          //question 6
-        question: '3(х-5)-5(х+3)=6 теңдеуінің шешімі',
+        question: 'А мен В шамасын салыстыр.<img class="math-pictures" src="img/2.6.png">',
         options: [
-            'А. 18',
-            'В. 20',
-            'С. 17',
-            'D. -18',
-            'Е. -20',
+            'А. А шамасы В шамасынан кіші',
+            'В. А шамасы В шамасынан үлкен',
+            'С. Екі еселенген А шамасы В шамасына тең',
+            'D. А шамасы мен В шамасын салыстыруға мәлімет жеткіліксіз',
+            'Е. А шамасы В шамасына тең',
         ],
-        rightAnswer: 3
+        rightAnswer: 1
     },
     {          //question 7 .
-        question: 'Үш қасқыр екі қойды 40 минутта жесе, алты қасқыр бір қойды жейтін уақыт',
+        question: ' 8-дің х% -і 12 болса, х-тің мәні',
         options: [
-            'А. 4 минут',
-            'В. 40 минут',
-            'С. 20 минут',
-            'D. 10 минут',
-            'Е. 240 минут',
+            'А. 40',
+            'В. 80',
+            'С. 100',
+            'D. 120',
+            'Е. 150',
         ],
-        rightAnswer: 3
+        rightAnswer: 4
     },
     {         //question 8
-        question: 'Берілген фигураның периметрі <img class="math-pictures" src="img/1.8.png">',
+        question: '0 < х &le; 5 теңсіздігін қанағаттандыратын аралық',
         options: [
-            'А. 72',
-            'В. 62',
-            'С. 124',
-            'D. 52',
-            'Е. 36',
+            'А. (-1; 6)',
+            'В. (0; 15)',
+            'С. (6; 15)',
+            'D. [-5; 5]',
+            'Е. [3; 4]',
         ],
-        rightAnswer: 2
+        rightAnswer: 4
     },
     {          //question 9
-        question: 'Құрамында тек 0 мен 1 цифралары бар неше төрт таңбалы сан жазуға болады?',
+        question: 'Суретте көрсетілген егістік жердің ауданы <img class="math-pictures" src="img/2.9.png">',
         options: [
-            'А. 6',
-            'В. 7',
-            'С. 8',
-            'D. 9',
-            'Е. 5',
+            'А. 2300 м&sup2;',
+            'В. 2400 м&sup2;',
+            'С. 2500 м&sup2;',
+            'D. 2600 м&sup2;',
+            'Е. 2700 м&sup2;',
+        ],
+        rightAnswer: 4
+    },
+    {         //question 10
+        question: 'Қайсы санның 20%-ы 0,2-ге тең?',
+        options: [
+            'А. 3',
+            'В. 4',
+            'С. 1',
+            'D. 12',
+            'Е. 15',
         ],
         rightAnswer: 2
     },
-    {         //question 10
-        question: 'Кестеде х және у айнымалыларының арасындағы тәуелділік көрсетілген.  <img class="math-pictures" src="img/1.10.png"> Келесі теңдеулердің қайсысы осы тәуелділікті анықтайды?',
-        options: [
-            'А. у=4х-3',
-            'В. у=4х-4',
-            'С. у=х+3',
-            'D. у=2х+1',
-            'Е. у=3х-2',
-        ],
-        rightAnswer: 4
-    },
     {         //question 11
-       question: 'Кестеде жердегі жануарлар саны көрсетілген. <img class="math-pictures" src="img/1.11.png"> Осы мәліметтерді дөңгелек диаграммаға салу керек болса, балықтарға сәйкес келетін бөліктің ең жуық градустық өлшемі?',
+       question: 'Электр фендерінің орта бағасын Р, функцияларының көптігін F, сапасын Q және дизайнын D бойынша бағалауға болады. Сонда бағалау рейтінгі келесі формула бойынша жүргізіледі R = 3(F + Q) + D - 0,001Р. Келесі кестеде 4 түрлі феннің маркаларының көрсеткіштері келтірілген: <img class="math-pictures" src="img/2.11.png"> Қай маркалы феннің рейтінгісі ең жоғары',
        options: [
-            'А. 134&deg;',
-            'В. 135&deg;',
-            'С. 150&deg;',
-            'D. 171&deg;',
-            'Е. 195&deg;',
+            'А. Б маркасы',
+            'В. А маркасы',
+            'С. Г маркасы',
+            'D. В маркасы',
+            'Е. А,Б маркалары',
         ],
-        rightAnswer: 3
+        rightAnswer: 0
     },
     {         //question 12
-        question: 'Суретте көрсетілген мәліметтер бойынша сызбада көрсетілген пәтердің ауданын табыңыз <img class="math-pictures" src="img/1.12.png">',
+        question: '2 кәмпит және 3 шоколад 100 теңге тұрады, 4 кәмпит және 1 шоколад 50 теңге тұрады. Кәмпит қанша теңге, шоколад қанша теңге тұрады? ',
         options: [
-            'А. 945 м&sup2;',
-            'В. 95 м&sup2;',
-            'С. 195 м&sup2;',
-            'D. 94,5 м&sup2;',
-            'Е. 90 м&sup2;',
+            'А. Кәмпит 5 теңге, шоколад 40 теңге тұрады',
+            'В. Кәмпит 2 теңге, шоколад 32 теңге тұрады',
+            'С. Кәмпит 30 теңге, шоколад 5 теңге тұрады',
+            'D. Кәмпит 20 теңге, шоколад 20 теңге тұрады',
+            'Е. Кәмпит 5 теңге, шоколад 30 теңге тұрады',
         ],
-        rightAnswer: 3
+        rightAnswer: 4
     },
     {         //question 13
-        question: 'Егер параллелипедтің сәйкес жақтарының аудандары берілген болса,оның қырларының ұзындықтарын табыңыз.<img class="math-pictures" src="img/1.13.png">',
+        question: 'Егер а+1 жұп сан болса, онда төмендегі сандардың ішінен тақ емес санды табыңыз',
         options: [
-            'А. 3; 3; 7',
-            'В. 3; 5; 7',
-            'С. 4; 4; 7',
-            'D. 7; 5; 3',
-            'Е. 7; 3; 4',
+            'А. (4а-3)&sup3;',
+            'В. a',
+            'С. a+2',
+            'D. a&sup3;+4',
+            'Е. a-5',
         ],
-        rightAnswer: 3
+        rightAnswer: 4
     },
     {         //question 14
-        question: '55 шар теңқабырғалы үшбұрыш қалпында орналастырылған. Шарлар неше қатарға жайылғанын анықтаңыз.<img class="math-pictures" src="img/1.14.png">',
+        question: ' АВС үшбұрышының СК биіктігі жүргізілген және АК = ВК = 8см. Егер үшбұрыштың периметрі 40 см-ге тең болса, АС және ВС қабырғаларының ұзындықтары қандай?',
         options: [
-            'А. 8',
+            'А. 13',
             'В. 12',
-            'С. 9',
-            'D. 11',
-            'Е. 10',
+            'С. 14',
+            'D. 25',
+            'Е. 20',
         ],
-        rightAnswer: 4
+        rightAnswer: 1
     },
     {         //question 15
-        question: ' А және В сандарын мына шарттарды қанағаттандырады, 4 &le; А &le; 6; 1 &le; В &le; 2; Келесі жауапта берілген сандардың қайсысы барлық уақытта 9-дан кіші болады?',
+        question: ' Тік төртбұрыштың ұзындығы енінен 1,25 есе ұзын. Оның ұзындығы 20% -ке кемітіп, енін 20% -ке арттырғанда, периметрі 2 см-ге кемиді. Тік төртбұрыштың алғашқы ұзындығын табыңыз',
         options: [
-            'А. 3A-B',
-            'В. 4A-B',
-            'С. A+2B',
-            'D. 13B-A',
-            'Е. 8B-2A',
+            'А. 25',
+            'В. 20',
+            'С. 24',
+            'D. 10',
+            'Е. 18',
         ],
-        rightAnswer: 4
+        rightAnswer: 0
     },
 
 
@@ -282,11 +282,11 @@ const randomQuestion = () => {
 const checkAnswer = el => {
     if(el.target.dataset.id == questions[indexOfQuestion].rightAnswer) {
         el.target.classList.add('correct');
-        let score = localStorage.getItem(`${user}_score_c1`);  //change a>c or 1>2
+        let score = localStorage.getItem(`${user}_score_c2`);  //change a>c or 1>2
         score++;
 
         updateAnswerTracker('correct');
-        localStorage.setItem(`${user}_score_c1`, score);   //change a>c or 1>2
+        localStorage.setItem(`${user}_score_c2`, score);   //change a>c or 1>2
 
     } else {
         el.target.classList.add('wrong');
@@ -341,7 +341,7 @@ for (option of optionElements) {
 
 const quizOver = () => {
     document.querySelector('.quiz-over-modal').classList.add('active');
-    correctAnswer.innerHTML = localStorage.getItem(`${user}_score_c1`);  //change a>c or 1>2
+    correctAnswer.innerHTML = localStorage.getItem(`${user}_score_c2`);  //change a>c or 1>2
     numberOfAllQuestions2.innerHTML = questions.length;
 
 }
