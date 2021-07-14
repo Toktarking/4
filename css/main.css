@@ -169,3 +169,7 @@ div#counter h3{
     background-color: #ff9900b4;
 }
 
+img.math-pictures {
+    display: block;
+    margin: 0px auto;
+}
